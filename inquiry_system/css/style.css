@@ -1,0 +1,581 @@
+@import "https://use.fontawesome.com/releases/v6.4.0/css/all.css";
+
+body {
+	text-align: center;
+	background-color: #b2e4d5;
+}
+
+form {
+
+}
+
+.error {
+	border: 2px solid red;
+	margin: 0 auto 20px auto;
+	width: 70%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.sent {
+	border: 2px solid blue;
+	margin: 0 auto 20px auto;
+	width: 80%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.formItem {
+	border-top:1px solid gray;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.formItem:not(.formItem.user) {
+	justify-content: space-evenly;
+}
+
+.label  {
+	width: 100%;
+	max-width: 280px;
+	letter-spacing: 0.05em;
+	font-weight: bold;
+	font-size: 18px;
+	text-align: left;
+}
+
+.labelRequired  {
+	border-radius: 6px;
+	margin-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	width: 48px;
+	display: inline-block;
+	text-align: center;
+	background: #5bc8ac;
+	color: red;
+	font-size: 14px;
+	border: 2px solid black;
+}
+
+.formItem input, .formItem select{
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-left: 40px;
+	padding-left: 1em;
+	padding-right: 1em;
+	flex: 1;
+	width: 100%;
+	max-width: 400px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+
+.formItem.user.tel input {
+	max-width: 120px;
+}
+
+.formItem.user.addcode input {
+	max-width: 80px;
+}
+
+.formItem.user.tel input:last-child, .formItem.user.tel input:nth-last-child(3) {
+	margin: 0;
+}
+
+.formItem.user.addcode input:last-child {
+	margin: 0;
+}
+
+.formItem input[type=text], .formItem input[type=password], .formInput select {
+	height: 48px;
+}
+
+.formItem select {
+	padding: 12px;
+	width: 150px;
+}
+
+.formItem input[type="radio"], .formItem input[type=""] {
+	width: 18pt; /* 大きさ：横 */
+	height: 18pt; /* 大きさ：縦 */
+	vertical-align: top; /* 並び位置   */
+	display: none; /* チェックボックス非表示 */
+}
+
+.formItem label {
+	margin-left: 40px;
+	width: 150px;
+}
+/* --- チェックボックス直後のlabel --- */
+.formItem input[type="radio"]+label, .formItem input[type="checkbox"]+label {
+	padding: 0 4px; /* labelの余白 */
+	font-size: 16pt; /* labelの文字サイズ */
+	font-weight: bold; /* 文字太さ   */
+	border: 2px solid #5bc8ac; /* labelの枠線 */
+	border-radius: 5px; /* labelの角丸 */
+	background: #ffffff; /* lebelの背景 */
+	cursor: pointer; /* カーソル設定 */
+	transition: .2s; /* なめらか変化 */
+}
+/* --- 選択されたチェックボックス直後のlabel --- */
+.formItem input[type="radio"]:checked+label, .formItem input[type="checkbox"]:checked+label {
+	background: #5bc8ac; /* lebelの背景 */
+}
+/* --- 選択されていないチェックボックス直後のlabelにマウスが乗った --- */
+.formItem input[type="radio"]:not (:checked ) +label:hover, .formItem input[type="checkbox"]:not (:checked) +label:hover {
+	background: rgba(91, 200, 172, 0.40); /* lebelの背景 */
+}
+
+.formItem textarea  {
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 216px;
+	flex: 1;
+	width: 100%;
+	max-width: 410px;
+	background: #eaedf2;
+	font-size: 18px;
+}
+
+textarea.userinput {
+	margin-left: 40px;
+}
+
+textarea.reply {
+	margin: 0 auto;
+}
+
+.type {
+	text-align: left;
+}
+
+.send {
+	display: inline-block;
+	border-radius: 10px; /* 角丸       */
+	font-size: 18pt; /* 文字サイズ */
+	font-weight: bold;
+	text-align: center; /* 文字位置   */
+	cursor: pointer; /* カーソル   */
+	padding: 20px 51px; /* 余白       */
+	background: #5bc8ac; /* 背景色     */
+	color: #000000; /* 文字色     */
+	line-height: 1em; /* 1行の高さ  */
+	transition: .3s; /* なめらか変化 */
+	border: 3px solid black; /* 枠の指定 */
+}
+
+.send:hover {
+	box-shadow: none; /* カーソル時の影消去 */
+	color: #5bc8ac; /* 背景色     */
+	background: #000000; /* 文字色     */
+	border: 3px solid #5bc6ac;
+}
+
+table.list {
+	margin: 0 auto;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+	border-spacing: 8px 5px;
+}
+
+.menu {
+	padding: 0;
+	margin: 20px 50px;
+	display: flex;
+	list-style: none;
+}
+
+.menu li {
+	margin-right: 20px;
+}
+
+.menu.admin li:nth-last-child(2) {
+	margin-left: auto;
+}
+
+.menu li div  {
+	padding: 5px;
+	width: 100px;
+	height: 100px;
+	border: 3px solid #5bc8ac;
+	border-radius: 9px;
+	display: table-cell;
+	vertical-align: middle;
+
+}
+
+.menu a {
+	font-weight: bold;
+	color: black;
+	margin: auto;
+}
+
+.menu i {
+	font-size: 300%;
+}
+
+table.user {
+	border-collapse: collapse;
+}
+
+.user tr {
+	border-bottom: 2px solid gray;
+	padding: 10px;
+}
+
+.user th {
+	background-color: #cccccc;
+	width: 150px;
+	text-align: left;
+}
+
+.user td {
+	height: 50px;
+	width: 400px;
+	padding-left: 50px;
+}
+
+textarea {
+	resize: none;
+}
+
+p {
+	white-space:pre-wrap;
+}
+
+input[type=submit] {
+	margin: 20px;
+}
+
+.admin {
+	text-align: center;
+}
+
+td.admin {
+	border-radius: 10px;
+}
+
+td.inquiryno {
+	border: 2px solid black;
+	border-radius: 10px;
+	font-weight: bold;
+	background-color: #5bc8ac;
+}
+
+.inquiryno a {
+	color: black;
+}
+
+.controll {
+	font-weight: bold;
+}
+
+a {
+	text-decoration: none;
+}
+
+a.reply {
+	color: white;
+}
+
+a.delete {
+	color: black;
+}
+
+.greenLine {
+	height: 5;
+	background-color: #5bc8ac;
+}
+
+.footer {
+	text-align: left;
+}
+
+.search_bar {
+	display: flex;
+	justify-content: center;
+}
+
+.name {
+	width: 150px;
+	padding : 8px 10px;
+	color: #333;
+	font-size: 1em;
+	line-height: 1.5;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #5bc8ac;
+}
+
+.selectbox {
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+}
+
+.selectbox::after {
+	position: absolute;
+	right: 15px;
+	width: 10px;
+	height: 7px;
+	background-color: #535353;
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+	content: '';
+	pointer-events: none;
+}
+
+.selectbox select {
+	appearance: none;
+	min-width: 150px;
+	height: 2.8em;
+	padding: .4em calc(.8em + 30px) .4em .8em;
+	border: none;
+	border-bottom: 2px solid #5bc8ac;
+	background-color: #fff;
+	color: #333333;
+	font-size: 1em;
+	cursor: pointer;
+}
+
+.selectbox select:focus {
+	outline: none;
+}
+
+input.search {
+	font-family: FontAwesome;
+	padding: 13px;
+}
+
+.fqa {
+	border-radius: 25px;
+}
+
+.fqa summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding: 1em 2em 1em 3em;
+	color: #333333;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.fqa summary::before, .fqa p::before {
+	position: absolute;
+	left: 1em;
+	font-weight: 600;
+	font-size: 1.3em;
+}
+
+.fqa summary::before {
+	color: #75bbff;
+	content: "Q";
+}
+
+.fqa summary::after {
+	transform: translateY(-25%) rotate(45deg);
+	width: 7px;
+	height: 7px;
+	margin-left: 10px;
+	border-bottom: 3px solid #333333b3;
+	border-right: 3px solid #333333b3;
+	content: '';
+	transition: transform .5s;
+}
+
+.fqa[open] summary::after {
+	transform: rotate(225deg);
+}
+
+.fqa p {
+	position: relative;
+	text-align: left;
+	transform: translateY(-10px);
+	opacity: 0;
+	margin: 0;
+	padding: .3em 3em 1.5em;
+	color: #333;
+	transition: transform .5s, opacity .5s;
+}
+
+.fqa[open] p {
+	transform: none;
+	opacity: 1;
+}
+
+.fqa p::before {
+	color: #ff8d8d;
+	line-height: 1.2;
+	content: "A";
+}
+
+.headline {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	position: relative;
+	padding: .5em .7em;
+	overflow: hidden;
+	border: 5px solid #6bc8ac;
+	border-radius: 5px;
+	color: #333333;
+}
+
+.headline:before {
+	position: absolute;
+	top: -50%;
+	left: -30px;
+	z-index: -1;
+	transform: rotate(25deg);
+	width: 100px;
+	height: 200%;
+	background-color: #6bc8ac;
+	content: '';
+}
+
+.headline span {
+	margin-right: 1.1em;
+	color: #fff;
+	font-size: 1.1em
+}
+
+.timeline {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+.timeline li {
+	display: flex;
+	flex: 1 1;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	color: #969da3;
+	font-size: .8em;
+	font-weight: bold;
+}
+
+.timeline li.prev, .timeline li.current {
+	color: #01c692;
+}
+
+.timeline li::before {
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	margin-bottom: 6px;
+	content: '';
+	border: 2px solid #d6dde3;
+	border-radius: 50%;
+	background-color: #fff;
+}
+
+.timeline li.prev::before, .timeline li.current::before {
+	border-color: #01c692;
+}
+
+.timeline li:not (:last-child )::after {
+	position: absolute;
+	top: 8px;
+	left: 50%;
+	z-index: -1;
+	width: 100%;
+	height: 2px;
+	background-color: #d6dde3;
+	content: '';
+}
+
+.timeline li.current::before, .timeline li.prev::after {
+	background-color: #01c692;
+}
+
+.personalInformation {
+	max-width: 70%;
+	margin: 0 auto;
+	padding: .5em 1.5em 1em;
+	border-top: 5px solid #5bc8ac;
+	border-radius: 3px;
+	background-color: #f2f2f2;
+}
+
+.personalInformation>div {
+	margin-bottom: .5em;
+	color: #5bc8ac;
+	font-weight: 600;
+	font-size: 1.05em;
+}
+
+.personalInformation>p {
+	margin: 0;
+	color: #333;
+	text-align: left;
+}
+
+.consent {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .3em 2em;
+	border: none;
+	text-align: center;
+}
+
+.consent label {
+	display: flex;
+	align-items: center;
+	gap: 0 .5em;
+	position: relative;
+	cursor: pointer;
+}
+
+.consent label::before, .consent label:has (:checked )::after {
+	border-radius: 3px;
+	content: '';
+}
+
+.consent label::before {
+	width: 18px;
+	height: 18px;
+	background-color: #e6edf3;
+}
+
+.consent label:has (:checked )::after {
+	position: absolute;
+	top: 50%;
+	left: 9px;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	background-color: #5bc8ac;
+	animation: anim-consent .3s linear;
+}
+
+@keyframes anim-consent {
+	0% {
+		box-shadow: 0 0 0 1px transparent;
+	}
+	50% {
+		box-shadow: 0 0 0 10px #5bc8ac33;
+	}
+	100% {
+		box-shadow: 0 0 0 10px transparent;
+	}
+}
+
+.consent input {
+	display: none;
+}

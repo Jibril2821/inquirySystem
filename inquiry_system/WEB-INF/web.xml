@@ -1,0 +1,131 @@
+<web-app>
+	<session-config>
+		<session-timeout>5</session-timeout>
+	</session-config>
+
+	<servlet>
+		<servlet-name>userSendMapping</servlet-name>
+		<servlet-class>servlet.UserSendServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userSendMapping</servlet-name>
+		<url-pattern>/userSend</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>userSendMailMapping</servlet-name>
+		<servlet-class>servlet.UserSendMailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>userSendMailMapping</servlet-name>
+		<url-pattern>/userSendMail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>loginMapping</servlet-name>
+		<servlet-class>servlet.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loginMapping</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>logoutMapping</servlet-name>
+		<servlet-class>servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logoutMapping</servlet-name>
+		<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>listMapping</servlet-name>
+		<servlet-class>servlet.ListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listMapping</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>detailMapping</servlet-name>
+		<servlet-class>servlet.DetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>detailMapping</servlet-name>
+		<url-pattern>/detail</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>replyMapping</servlet-name>
+		<servlet-class>servlet.ReplyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>replyMapping</servlet-name>
+		<url-pattern>/reply</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deleteMapping</servlet-name>
+		<servlet-class>servlet.DeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteMapping</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deleteFromListMapping</servlet-name>
+		<servlet-class>servlet.DeleteFromListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteFromListMapping</servlet-name>
+		<url-pattern>/deleteFromList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>historyListMapping</servlet-name>
+		<servlet-class>servlet.HistoryListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>historyListMapping</servlet-name>
+		<url-pattern>/historyList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>changePasswordMapping</servlet-name>
+		<servlet-class>servlet.ChangePasswordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>changePasswordMapping</servlet-name>
+		<url-pattern>/changePassword</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>manageAdminListMapping</servlet-name>
+		<servlet-class>servlet.ManageAdminListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>manageAdminListMapping</servlet-name>
+		<url-pattern>/manageAdminList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>addAdminMapping</servlet-name>
+		<servlet-class>servlet.AddAdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addAdminMapping</servlet-name>
+		<url-pattern>/addAdmin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>deleteAdminMapping</servlet-name>
+		<servlet-class>servlet.DeleteAdminServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteAdminMapping</servlet-name>
+		<url-pattern>/deleteAdmin</url-pattern>
+	</servlet-mapping>
+</web-app>
